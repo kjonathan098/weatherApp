@@ -1,0 +1,13 @@
+<div class="search">
+  <form #cityForm="ngForm" action="" (submit)="fetchCity()">
+    <input
+      type="text"
+      placeholder="search city"
+      ngModel
+      name="city"
+      [(ngModel)]="cityName"
+    />
+  </form>
+  <h6 *ngIf="cityNotFound">{{ cityNotFound }}</h6>
+  <h5 *ngIf="loading">loading...</h5>
+</div>
